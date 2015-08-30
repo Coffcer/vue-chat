@@ -1,6 +1,6 @@
 {
   "name": "vue-chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "chat example by vue.js + webpack",
   "scripts": {
     "dev": "webpack --watch",
