@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Chat</title>
+	<style>
+		*, *:before, *:after {
+			box-sizing: border-box;
+		}
+		body, html {
+			height: 100%;
+			overflow: hidden;
+		}
+		body, ul {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			color: #4d4d4d;
+			font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+			background: #f5f5f5 url('build/images/bg.jpg') no-repeat center;
+			background-size: cover;
+			font-smoothing: antialiased;
+		}
+		ul {
+			list-style: none;
+		}
+		#chat {
+			margin: 20px auto;
+			width: 800px;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div id="chat"></div>
+	<script src="build/vue.min.js"></script>
+	<script src="build/script.js"></script>
+</body>
+</html>
