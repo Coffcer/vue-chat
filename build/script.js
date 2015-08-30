@@ -429,22 +429,22 @@
 			user: {
 				id: 1,
 				name: 'Coffce',
-				img: '/build/images/1.jpg'
+				img: 'build/images/1.jpg'
 			},
 	
 			// 用户列表
 			userList: [{
 				id: 2,
 				name: '示例介绍',
-				img: '/build/images/2.png'
+				img: 'build/images/2.png'
 			}, {
 				id: 3,
 				name: '邓紫棋',
-				img: '/build/images/3.jpg'
+				img: 'build/images/3.jpg'
 			}, {
 				id: 4,
 				name: 'Webpack',
-				img: '/build/images/4.jpg'
+				img: 'build/images/4.jpg'
 			}],
 	
 			// 当前会话ID
