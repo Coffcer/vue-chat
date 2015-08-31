@@ -1,7 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var vue = require("vue-loader");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+// var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	entry: {
