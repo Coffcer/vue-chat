@@ -1,7 +1,5 @@
 require('./message.less');
 
-//const dateFilter = require('filter/date');
-
 module.exports = {
     template: require('./message.tpl'),
     props: ['store'],

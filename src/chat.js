@@ -29,7 +29,6 @@ const chat = new Vue({
             if (typeof date === 'string') {
                 date = new Date(date);
             }
-            
             return date.getHours() + ':' + date.getMinutes();
         }
     },

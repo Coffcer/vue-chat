@@ -53,42 +53,42 @@
 	Vue.config.debug = true;
 	
 	var chat = new Vue({
-		el: '#chat',
-		template: __webpack_require__(6),
-		data: {
-			store: store.fetch()
-		},
-		ready: function ready() {
-			var _this = this;
+	    el: '#chat',
+	    template: __webpack_require__(6),
+	    data: {
+	        store: store.fetch()
+	    },
+	    ready: function ready() {
+	        var _this = this;
 	
-			this.$on('search', function (search) {
-				_this.$broadcast('search', search);
-			});
-		},
-		watch: {
-			// 每当sessionList改变时，保存到localStorage中
-			'store.sessionList': {
-				handler: function handler() {
-					store.save(this.store);
-				},
-				deep: true
-			}
-		},
-		filters: {
-			time: function time(date) {
-				if (typeof date === 'string') {
-					date = new Date(date);
-				}
+	        this.$on('search', function (search) {
+	            _this.$broadcast('search', search);
+	        });
+	    },
+	    watch: {
+	        // 每当sessionList改变时，保存到localStorage中
+	        'store.sessionList': {
+	            handler: function handler() {
+	                store.save(this.store);
+	            },
+	            deep: true
+	        }
+	    },
+	    filters: {
+	        time: function time(date) {
+	            if (typeof date === 'string') {
+	                date = new Date(date);
+	            }
 	
-				return date.getHours() + ':' + date.getMinutes();
-			}
-		},
-		components: {
-			card: __webpack_require__(7),
-			list: __webpack_require__(11),
-			text: __webpack_require__(15),
-			message: __webpack_require__(19)
-		}
+	            return date.getHours() + ':' + date.getMinutes();
+	        }
+	    },
+	    components: {
+	        card: __webpack_require__(7),
+	        list: __webpack_require__(11),
+	        text: __webpack_require__(15),
+	        message: __webpack_require__(19)
+	    }
 	});
 
 /***/ },
@@ -422,68 +422,68 @@
 	
 	// 虚拟数据
 	if (!localStorage.getItem(key)) {
-		var now = new Date();
+	    var now = new Date();
 	
-		var data = {
-			// 登录用户
-			user: {
-				id: 1,
-				name: 'Coffce',
-				img: 'build/images/1.jpg'
-			},
+	    var data = {
+	        // 登录用户
+	        user: {
+	            id: 1,
+	            name: 'Coffce',
+	            img: 'build/images/1.jpg'
+	        },
 	
-			// 用户列表
-			userList: [{
-				id: 2,
-				name: '示例介绍',
-				img: 'build/images/2.png'
-			}, {
-				id: 3,
-				name: '邓紫棋',
-				img: 'build/images/3.jpg'
-			}, {
-				id: 4,
-				name: 'Webpack',
-				img: 'build/images/4.jpg'
-			}],
+	        // 用户列表
+	        userList: [{
+	            id: 2,
+	            name: '示例介绍',
+	            img: 'build/images/2.png'
+	        }, {
+	            id: 3,
+	            name: '邓紫棋',
+	            img: 'build/images/3.jpg'
+	        }, {
+	            id: 4,
+	            name: 'Webpack',
+	            img: 'build/images/4.jpg'
+	        }],
 	
-			// 当前会话ID
-			sessionId: 0,
+	        // 当前会话ID
+	        sessionId: 0,
 	
-			// 会话列表
-			sessionList: [{
-				userId: 2,
-				messages: [{
-					text: 'Hello，这是一个基于Vue + Webpack构建的简单chat示例，聊天记录保存在localStorge。简单演示了Vue的component、filter、directive、computed以及组件间的事件通讯，代码非常少。',
-					date: now
-				}, {
-					text: '项目地址: https://github.com/coffcer/vue-chat',
-					date: now
-				}]
-			}, {
-				userId: 3,
-				messages: [{
-					text: '听说下雨天，Vue和Webpack更配喔',
-					date: now
-				}]
-			}, {
-				userId: 4,
-				messages: []
-			}]
-		};
+	        // 会话列表
+	        sessionList: [{
+	            userId: 2,
+	            messages: [{
+	                text: 'Hello，这是一个基于Vue + Webpack构建的简单chat示例，聊天记录保存在localStorge。简单演示了Vue的component、filter、directive、computed以及组件间的事件通讯，代码非常少。',
+	                date: now
+	            }, {
+	                text: '项目地址: https://github.com/coffcer/vue-chat',
+	                date: now
+	            }]
+	        }, {
+	            userId: 3,
+	            messages: [{
+	                text: '听说下雨天，Vue和Webpack更配喔',
+	                date: now
+	            }]
+	        }, {
+	            userId: 4,
+	            messages: []
+	        }]
+	    };
 	
-		localStorage.setItem(key, JSON.stringify(data));
+	    localStorage.setItem(key, JSON.stringify(data));
 	}
 	
 	module.exports = {
 	
-		fetch: function fetch() {
-			return JSON.parse(localStorage.getItem(key));
-		},
+	    fetch: function fetch() {
+	        return JSON.parse(localStorage.getItem(key));
+	    },
 	
-		save: function save(store) {
-			localStorage.setItem(key, JSON.stringify(store));
-		}
+	    save: function save(store) {
+	        localStorage.setItem(key, JSON.stringify(store));
+	    }
 	
 	};
 
@@ -502,18 +502,18 @@
 	__webpack_require__(8);
 	
 	module.exports = {
-		template: __webpack_require__(10),
-		props: ['store'],
-		data: function data() {
-			return {
-				search: ''
-			};
-		},
-		methods: {
-			inputing: function inputing() {
-				this.$dispatch('search', this.search);
-			}
-		}
+	    template: __webpack_require__(10),
+	    props: ['store'],
+	    data: function data() {
+	        return {
+	            search: ''
+	        };
+	    },
+	    methods: {
+	        inputing: function inputing() {
+	            this.$dispatch('search', this.search);
+	        }
+	    }
 	};
 
 /***/ },
@@ -571,30 +571,30 @@
 	__webpack_require__(12);
 	
 	module.exports = {
-		template: __webpack_require__(14),
-		props: ['store'],
-		data: function data() {
-			return {
-				search: ''
-			};
-		},
-		ready: function ready() {
-			var _this = this;
+	    template: __webpack_require__(14),
+	    props: ['store'],
+	    data: function data() {
+	        return {
+	            search: ''
+	        };
+	    },
+	    ready: function ready() {
+	        var _this = this;
 	
-			this.$on('search', function (search) {
-				_this.search = search;
-			});
-		},
-		computed: {
-			selectUserId: function selectUserId() {
-				return this.store.sessionList[this.store.sessionId].userId;
-			}
-		},
-		methods: {
-			select: function select(index) {
-				this.store.sessionId = index;
-			}
-		}
+	        this.$on('search', function (search) {
+	            _this.search = search;
+	        });
+	    },
+	    computed: {
+	        selectUserId: function selectUserId() {
+	            return this.store.sessionList[this.store.sessionId].userId;
+	        }
+	    },
+	    methods: {
+	        select: function select(index) {
+	            this.store.sessionId = index;
+	        }
+	    }
 	};
 
 /***/ },
@@ -652,25 +652,25 @@
 	__webpack_require__(16);
 	
 	module.exports = {
-		template: __webpack_require__(18),
-		props: ['store'],
-		data: function data() {
-			return {
-				text: ''
-			};
-		},
-		methods: {
-			inputing: function inputing(e) {
-				if (e.ctrlKey && e.keyCode === 13 && this.text.length) {
-					this.store.sessionList[this.store.sessionId].messages.push({
-						text: this.text,
-						date: new Date(),
-						self: true
-					});
-					this.text = '';
-				}
-			}
-		}
+	    template: __webpack_require__(18),
+	    props: ['store'],
+	    data: function data() {
+	        return {
+	            text: ''
+	        };
+	    },
+	    methods: {
+	        inputing: function inputing(e) {
+	            if (e.ctrlKey && e.keyCode === 13 && this.text.length) {
+	                this.store.sessionList[this.store.sessionId].messages.push({
+	                    text: this.text,
+	                    date: new Date(),
+	                    self: true
+	                });
+	                this.text = '';
+	            }
+	        }
+	    }
 	};
 
 /***/ },
@@ -727,35 +727,33 @@
 	
 	__webpack_require__(20);
 	
-	//const dateFilter = require('filter/date');
-	
 	module.exports = {
-		template: __webpack_require__(22),
-		props: ['store'],
-		filters: {
-			avatar: function avatar(item) {
-				if (item.self) {
-					return this.store.user.img;
-				}
+	    template: __webpack_require__(22),
+	    props: ['store'],
+	    filters: {
+	        avatar: function avatar(item) {
+	            if (item.self) {
+	                return this.store.user.img;
+	            }
 	
-				var session = this.store.sessionList[this.store.sessionId],
-				    user = this.store.userList.filter(function (user) {
-					return user.id === session.userId;
-				})[0];
+	            var session = this.store.sessionList[this.store.sessionId],
+	                user = this.store.userList.filter(function (user) {
+	                return user.id === session.userId;
+	            })[0];
 	
-				return user && user.img;
-			}
-		},
-		directives: {
-			// 发送消息后滚动到底部
-			'scroll-bottom': function scrollBottom() {
-				var _this = this;
+	            return user && user.img;
+	        }
+	    },
+	    directives: {
+	        // 发送消息后滚动到底部
+	        'scroll-bottom': function scrollBottom() {
+	            var _this = this;
 	
-				Vue.nextTick(function () {
-					_this.el.scrollTop = _this.el.scrollHeight - _this.el.clientHeight;
-				});
-			}
-		}
+	            Vue.nextTick(function () {
+	                _this.el.scrollTop = _this.el.scrollHeight - _this.el.clientHeight;
+	            });
+	        }
+	    }
 	};
 
 /***/ },
