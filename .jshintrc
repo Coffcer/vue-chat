@@ -7,7 +7,6 @@
     "browser": true,
     "devel": true,
     "browserify": true,
-    "jquery": true,
 	"globals": {
 		"Vue": true
 	}
