@@ -1,4 +1,4 @@
-const key = 'VUE-CHAT';
+const key = 'VUE-CHAT-v1';
 
 // 虚拟数据
 if (!localStorage.getItem(key)) {
@@ -18,7 +18,8 @@ if (!localStorage.getItem(key)) {
                 id: 2,
                 name: '示例介绍',
                 img: 'build/images/2.png'
-            },{
+            },
+            {
                 id: 3,
                 name: 'webpack',
                 img: 'build/images/3.jpg'
