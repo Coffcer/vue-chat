@@ -5,9 +5,9 @@ module.exports = {
     entry: './src/main',
     // 输出
     output: {
-        path: path.join(__dirname, './build'),
+        path: path.join(__dirname, './dist'),
         filename: '[name].js',
-        publicPath: '/build/'
+        publicPath: '/dist/'
     },
     module: {
         // 加载器

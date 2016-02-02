@@ -5,7 +5,6 @@
     import text from './text';
     import message from './message';
 
-
     export default {
         el: '#chat',
         data () {
@@ -20,7 +19,7 @@
                 sessionList: serverData.sessionList,
                 // 搜索key
                 search: '',
-                // 选中的会话
+                // 选中的会话Index
                 sessionIndex: 0
             };
         },
