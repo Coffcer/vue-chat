@@ -2,7 +2,7 @@
 
 [Live demo](http://coffcer.github.io/vue-chat/)
 
-<img width="600" height="400" src="http://coffcer.github.io/vue-chat/dist/images/intro.jpg">
+<img width="600" height="400" src="https://github.com/Coffcer/vue-chat/blob/master/intro.jpg">
 
 ### Setup
 
