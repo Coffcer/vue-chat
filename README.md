@@ -1,6 +1,8 @@
-# vue-chat
+# Chat by Vue + Webpack
 
-> A Vue.js project
+[Live demo](http://coffcer.github.io/vue-chat/)
+
+<img width="600" height="400" src="https://github.com/Coffcer/vue-chat/blob/vuex/intro.jpg">
 
 ## Build Setup
 
@@ -14,5 +16,3 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
